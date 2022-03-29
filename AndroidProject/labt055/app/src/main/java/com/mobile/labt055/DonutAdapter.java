@@ -1,22 +1,24 @@
-package com.mobile.lab5;
+package com.mobile.labt055;
 
 import android.content.Context;
-import android.graphics.Color;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.List;
+import java.util.zip.Inflater;
 
 public class DonutAdapter extends BaseAdapter {
     private Context context;
     private int idLayout;
     private List<Donut> donutList;
-    private int positionSelect = -1;
+    private int posSelect = -1;
 
     public DonutAdapter(Context context, int idLayout, List<Donut> donutList) {
         this.context = context;
@@ -26,7 +28,10 @@ public class DonutAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return donutList.size();
+        if(donutList.size() != 0 && !donutList.isEmpty()) {
+            return donutList.size();
+        }
+        return 0;
     }
 
     @Override
@@ -45,39 +50,29 @@ public class DonutAdapter extends BaseAdapter {
             view = LayoutInflater.from(viewGroup.getContext()).inflate(idLayout,viewGroup,false);
         }
 
-        ImageView dnImg = view.findViewById(R.id.dnImg);
-        TextView dnName = view.findViewById(R.id.dnName);
-        TextView dnDetail = view.findViewById(R.id.dnDetail);
-        TextView dnCost = view.findViewById(R.id.dnCost);
+        ImageView donutIdImg = view.findViewById(R.id.donutImg);
+        TextView donutName = view.findViewById(R.id.donutName);
+        ImageButton donutPlusBtn = view.findViewWithTag(R.id.donutPlusBtn);
 
         LinearLayout layout = view.findViewById(R.id.idLinearLayout);
         Donut donut = donutList.get(i);
 
-        if (donutList != null && !donutList.isEmpty()) {
-            dnImg.setImageResource(context.getResources().getIdentifier(
-                    donut.getDnImg(),
-                    "drawable",
-                    context.getPackageName()
-            ));
-            dnName.setText(donut.getDnName());
-            dnDetail.setText(donut.getDnDetail());
-            dnCost.setText(donut.getDnCost());  
+        if(donutList != null && !donutList.isEmpty()) {
+            donutIdImg.setImageResource(donut.getDonutIdImg());
+            donutName.setText(donut.getDonutName());
         }
 
-        view.setOnClickListener(new View.OnClickListener() {
+        donutPlusBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                positionSelect = i;
-                notifyDataSetChanged();
+                openDetail();
             }
         });
 
-        if(positionSelect == i) {
-            layout.setBackgroundColor(Color.GRAY);
-        } else {
-            layout.setBackgroundColor(Color.WHITE);
-        }
-
         return view;
+    }
+
+    public void openDetail() {
+        Intent intent = new Intent(context, DonutDetail.class);
     }
 }
