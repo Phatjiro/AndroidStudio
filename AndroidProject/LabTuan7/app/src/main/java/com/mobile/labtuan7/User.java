@@ -1,5 +1,10 @@
 package com.mobile.labtuan7;
 
+/**
+ * Tạo đối tượng user để lưu trữ thông tin
+ * Hàm constructor, get/set cơ bản
+ */
+
 public class User {
     private int id;
     private String name;
