@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tuan9New">
         <activity
+            android:name=".InfoUser"
+            android:exported="false" />
+        <activity
+            android:name=".LayoutRegister"
+            android:exported="false" />
+        <activity
             android:name=".LayoutSignIn"
             android:exported="false" />
         <activity

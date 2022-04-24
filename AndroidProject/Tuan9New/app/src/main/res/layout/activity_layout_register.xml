@@ -4,34 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LayoutSignIn">
+    tools:context=".LayoutRegister">
 
     <TextView
-        android:id="@+id/tvSignIn"
+        android:id="@+id/tvRegister"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginTop="32dp"
         android:gravity="center"
-        android:text="Sign in"
+        android:text="Register Activity"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/txtSignInMail"
+        android:id="@+id/txtRegisterName"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginTop="100dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegister" />
+
+    <EditText
+        android:id="@+id/txtRegisterMail"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
         android:ems="10"
         android:hint="Mail"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSignIn" />
+        app:layout_constraintTop_toBottomOf="@+id/txtRegisterName" />
 
     <EditText
-        android:id="@+id/txtSignInPassword"
+        android:id="@+id/txtRegisterPassword"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginTop="50dp"
@@ -40,15 +52,27 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSignInMail" />
+        app:layout_constraintTop_toBottomOf="@+id/txtRegisterMail" />
 
-    <Button
-        android:id="@+id/btnSignIn"
+    <EditText
+        android:id="@+id/txtRegisterConfirmPassword"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginTop="50dp"
-        android:text="Sign in"
+        android:ems="10"
+        android:hint="Confirm password"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSignInPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/txtRegisterPassword" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        android:text="Register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRegisterConfirmPassword" />
 </androidx.constraintlayout.widget.ConstraintLayout>
