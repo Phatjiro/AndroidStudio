@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "308141474212",
+    "project_id": "tuan9-41848",
+    "storage_bucket": "tuan9-41848.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:308141474212:android:dda9be7d9bdaf9b84cc131",
+        "android_client_info": {
+          "package_name": "com.mobile.tuan9"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "308141474212-b14apau2a6e1vhpn64jjqsvg91aqvhjr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mobile.tuan9",
+            "certificate_hash": "522cae825952dd687ebe0a7e6b17cb16badc0efd"
+          }
+        },
+        {
+          "client_id": "308141474212-nnigdipjng5degfpc23622hd12vk0384.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUwfsDP9_JGASsgmkPE0G3lLH-u2_7nVE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "308141474212-nnigdipjng5degfpc23622hd12vk0384.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
