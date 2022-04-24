@@ -61,12 +61,25 @@ public class Register extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-
+                            UserHappy user = new UserHappy(ten, mail);
+                            FirebaseDatabase.getInstance().getReference("users")
+                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                    .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    showMainActivity();
+                                }
+                            });
                         } else {
-
+                            Toast.makeText(Register.this, "Failed buoc 2", Toast.LENGTH_LONG).show();
                         }
                     }
                 });
+    }
+
+    public void showMainActivity() {
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
     }
 
 }

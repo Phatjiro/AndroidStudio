@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
     private Button btnSignIn;
     private Button btnRegister;
@@ -20,21 +20,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnSignIn = findViewById(R.id.btnSignIn);
         btnRegister = findViewById(R.id.btnRegister);
 
-        btnSignIn.setOnClickListener(this);
-        btnRegister.setOnClickListener(this);
+        btnSignIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openSignIn();
+            }
+        });
+        btnRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openRegister();
+            }
+        });
 
     }
 
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.btnSignIn:
-                startActivity(new Intent(this, SignIn.class));
-                break;
+    public void openSignIn() {
+        startActivity(new Intent(this, SignIn.class));
+    }
 
-            case R.id.btnRegister:
-                startActivity(new Intent(this, Register.class));
-                break;
-        }
+    public void openRegister() {
+        startActivity(new Intent(this, Register.class));
     }
 }
