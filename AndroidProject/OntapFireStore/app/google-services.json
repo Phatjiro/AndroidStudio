@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "167712981539",
+    "project_id": "ontapfirestore",
+    "storage_bucket": "ontapfirestore.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:167712981539:android:7b8a9064bad6bbbd5f6796",
+        "android_client_info": {
+          "package_name": "com.mobile.ontapfirestore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "167712981539-31qcva9j1blsvge9u2t28pjeq6m4l1i9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8gXU1c14Z01WM-N6LXQXvrnAj2JAn5nA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "167712981539-31qcva9j1blsvge9u2t28pjeq6m4l1i9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
