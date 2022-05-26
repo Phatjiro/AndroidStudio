@@ -71,17 +71,6 @@ public class Register extends AppCompatActivity {
             tfPassDK.setError("Password can't be empty");
             tfPassDK.requestFocus();
         } else {
-//            mAuth.createUserWithEmailAndPassword(email, pass).addOnSuccessListener(authResult -> {
-//                User user = new User(email, pass, age);
-//                db.collection("User").add(user).addOnSuccessListener(documentReference -> {
-//                    Toast.makeText(Register.this, "Register and save data successfully!", Toast.LENGTH_LONG).show();
-//                }).addOnFailureListener(e -> {
-//                   Toast.makeText(Register.this, "Register successfully but save data failed!", Toast.LENGTH_LONG).show();
-//                });
-//            }).addOnFailureListener(e -> {
-//                Toast.makeText(Register.this, "Register failed!", Toast.LENGTH_LONG).show();
-//            });
-
             mAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(task -> {
                 if (task.isSuccessful()) {
                     Toast.makeText(Register.this, "Register and save data successfully!", Toast.LENGTH_LONG).show();

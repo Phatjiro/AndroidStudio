@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "965483995119",
+    "project_id": "nguyenvanphat-c3680",
+    "storage_bucket": "nguyenvanphat-c3680.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965483995119:android:abc3354a242a4592c9201a",
+        "android_client_info": {
+          "package_name": "com.mobile.nguyenvanphat19483821"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "965483995119-vq667llllmn234eg0go9n2s0l6265opa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB46_Hbbv8mBbjjpLT32D2offjKfyeNKuE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "965483995119-vq667llllmn234eg0go9n2s0l6265opa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

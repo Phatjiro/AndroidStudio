@@ -1,0 +1,2 @@
+Figma: https://www.figma.com/file/1CIwjcOqaDATsf9q67zt50/KTThucHanhAndroid
+Firebase: https://console.firebase.google.com/u/0/project/nguyenvanphat-c3680/authentication/users
